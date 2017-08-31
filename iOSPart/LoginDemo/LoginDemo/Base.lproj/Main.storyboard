@@ -48,22 +48,32 @@
                                     <action selector="actionLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Oq-tq-TQB"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-Pu-gSr">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-Pu-gSr">
                                 <rect key="frame" x="139" y="362" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q28-4c-83k">
+                                <rect key="frame" x="16" y="104" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Q28-4c-83k" secondAttribute="trailing" constant="16" id="0iO-Tw-cjZ"/>
                             <constraint firstItem="gVr-u1-M8r" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3Lu-MI-sAN"/>
+                            <constraint firstItem="2NJ-Wn-j5L" firstAttribute="top" secondItem="Q28-4c-83k" secondAttribute="bottom" constant="29" id="4DG-FX-H7G"/>
+                            <constraint firstItem="Q28-4c-83k" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="4oX-a6-0cV"/>
+                            <constraint firstItem="Bcv-uP-Z3N" firstAttribute="leading" secondItem="yRe-Pu-gSr" secondAttribute="trailing" constant="-143" id="8c9-kY-ydS"/>
                             <constraint firstItem="gVr-u1-M8r" firstAttribute="top" secondItem="2NJ-Wn-j5L" secondAttribute="bottom" constant="8" id="8in-Aj-BcU"/>
                             <constraint firstItem="IYh-hO-cLb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FE2-8B-Cll"/>
                             <constraint firstItem="Bcv-uP-Z3N" firstAttribute="top" secondItem="IYh-hO-cLb" secondAttribute="bottom" constant="28" id="FzE-ye-g7J"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IYh-hO-cLb" secondAttribute="trailing" constant="16" id="OZ2-tM-ZAF"/>
                             <constraint firstItem="IYh-hO-cLb" firstAttribute="top" secondItem="59d-BB-3mV" secondAttribute="bottom" constant="19" id="Ocn-CD-192"/>
                             <constraint firstItem="2NJ-Wn-j5L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="PD0-H4-Uup"/>
-                            <constraint firstItem="2NJ-Wn-j5L" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="93" id="TVK-vE-dye"/>
+                            <constraint firstItem="yRe-Pu-gSr" firstAttribute="centerY" secondItem="Bcv-uP-Z3N" secondAttribute="centerY" id="XLu-e8-Hvh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="59d-BB-3mV" secondAttribute="trailing" constant="16" id="YiI-OO-uso"/>
+                            <constraint firstItem="Q28-4c-83k" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="Zbe-3k-RAm"/>
                             <constraint firstItem="59d-BB-3mV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="jH3-Ms-rfP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gVr-u1-M8r" secondAttribute="trailing" constant="16" id="kuJ-fC-WpF"/>
                             <constraint firstItem="Bcv-uP-Z3N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lPi-MO-Ooy"/>
@@ -76,6 +86,7 @@
                     <navigationItem key="navigationItem" id="vEJ-mT-viZ"/>
                     <connections>
                         <outlet property="btnLogin" destination="Bcv-uP-Z3N" id="mwS-i1-Olr"/>
+                        <outlet property="lbPrompt" destination="Q28-4c-83k" id="teW-mK-eN1"/>
                         <outlet property="loadingIndicator" destination="yRe-Pu-gSr" id="LCN-rT-8Zb"/>
                         <outlet property="tfPassword" destination="IYh-hO-cLb" id="usA-hj-ZY2"/>
                         <outlet property="tfUserName" destination="gVr-u1-M8r" id="PYL-xD-pIC"/>

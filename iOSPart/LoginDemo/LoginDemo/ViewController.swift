@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var lbPrompt: UILabel!
     @IBOutlet weak var tfUserName: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
@@ -23,6 +24,11 @@ class ViewController: UIViewController {
         title = "Login"
         loadingIndicator.hidesWhenStopped = true
         loadingIndicator.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        lbPrompt.text = ""
     }
     
     @IBAction func actionLogin(_ sender: UIButton) {
@@ -53,12 +59,36 @@ class ViewController: UIViewController {
             guard let data = data else { print("No data"); return }
             
             if (response.statusCode == 200) {
-                let jsonObject = try! JSONSerialization.jsonObject(with: data) as? Dictionary<String, Any>
-                guard let token = jsonObject!["token"] else { return }
                 
-                UserDefaults.standard.setValue(token as! String, forKey: TokenKey)
-                DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "detail", sender: nil)
+                var jsonObject: Dictionary<String, Any>!
+                do {
+                    let json = try JSONSerialization.jsonObject(with: data)
+                    guard let innerJsonObject = json as? Dictionary<String, Any> else {
+                        DispatchQueue.main.async {
+                            self.lbPrompt.text = "Something wrong when convert json"
+                        }
+                        return
+                    }
+                    jsonObject = innerJsonObject
+                } catch {
+                    DispatchQueue.main.async {
+                        self.lbPrompt.text = "Something wrong when convert json"
+                    }
+                    return
+                }
+                
+                let success = jsonObject["success"] as! Bool
+                if (success) {
+                    guard let token = jsonObject["token"] else { return }
+                    UserDefaults.standard.setValue(token as! String, forKey: TokenKey)
+                    DispatchQueue.main.async {
+                        self.lbPrompt.text = (jsonObject["msg"] as! String)
+                        self.performSegue(withIdentifier: "detail", sender: nil)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.lbPrompt.text = (jsonObject["msg"] as! String)
+                    }
                 }
             }
         }
