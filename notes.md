@@ -64,7 +64,7 @@ mongo
 localhost:8080/ | GET | 主页，没什么东西
 localhost:8080/api/signup | POST | 注册
 localhost:8080/api/user/accesstoken | POST | 获取 token
-localhost:8080/api/user/info | POST | 根据 token 获取用户信息
+localhost:8080/api/user/info | GET | 根据 token 获取用户信息
 
 #### 项目目录结构
 

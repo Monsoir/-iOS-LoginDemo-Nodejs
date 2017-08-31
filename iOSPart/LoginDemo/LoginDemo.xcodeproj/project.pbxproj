@@ -14,6 +14,9 @@
 		F9430AFC1F57A32000BEB5FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9430AFA1F57A32000BEB5FF /* LaunchScreen.storyboard */; };
 		F9430B071F57A32000BEB5FF /* LoginDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9430B061F57A32000BEB5FF /* LoginDemoTests.swift */; };
 		F9430B121F57A32000BEB5FF /* LoginDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9430B111F57A32000BEB5FF /* LoginDemoUITests.swift */; };
+		F9430B201F57E68000BEB5FF /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9430B1F1F57E68000BEB5FF /* NetworkUtil.swift */; };
+		F959552E1F57FD990038A92B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959552D1F57FD990038A92B /* DetailViewController.swift */; };
+		F95955301F5805F10038A92B /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959552F1F5805F10038A92B /* Const.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		F9430B0D1F57A32000BEB5FF /* LoginDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LoginDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9430B111F57A32000BEB5FF /* LoginDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDemoUITests.swift; sourceTree = "<group>"; };
 		F9430B131F57A32000BEB5FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9430B1F1F57E68000BEB5FF /* NetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
+		F959552D1F57FD990038A92B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F959552F1F5805F10038A92B /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			children = (
 				F9430AF11F57A32000BEB5FF /* AppDelegate.swift */,
 				F9430AF31F57A32000BEB5FF /* ViewController.swift */,
+				F959552D1F57FD990038A92B /* DetailViewController.swift */,
+				F959552F1F5805F10038A92B /* Const.swift */,
+				F9430B1F1F57E68000BEB5FF /* NetworkUtil.swift */,
 				F9430AF51F57A32000BEB5FF /* Main.storyboard */,
 				F9430AF81F57A32000BEB5FF /* Assets.xcassets */,
 				F9430AFA1F57A32000BEB5FF /* LaunchScreen.storyboard */,
@@ -258,6 +267,9 @@
 			files = (
 				F9430AF41F57A32000BEB5FF /* ViewController.swift in Sources */,
 				F9430AF21F57A32000BEB5FF /* AppDelegate.swift in Sources */,
+				F9430B201F57E68000BEB5FF /* NetworkUtil.swift in Sources */,
+				F959552E1F57FD990038A92B /* DetailViewController.swift in Sources */,
+				F95955301F5805F10038A92B /* Const.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +534,7 @@
 				F9430B181F57A32000BEB5FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9430B191F57A32000BEB5FF /* Build configuration list for PBXNativeTarget "LoginDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +543,7 @@
 				F9430B1B1F57A32000BEB5FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F9430B1C1F57A32000BEB5FF /* Build configuration list for PBXNativeTarget "LoginDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +552,7 @@
 				F9430B1E1F57A32000BEB5FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
