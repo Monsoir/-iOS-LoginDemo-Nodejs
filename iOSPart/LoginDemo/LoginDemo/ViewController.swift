@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    
-    let session = URLSession.shared
-    var dataTask: URLSessionTask?
+    @IBOutlet weak var btnRegister: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +32,12 @@ class ViewController: UIViewController {
     @IBAction func actionLogin(_ sender: UIButton) {
         
         sender.isEnabled = false
+        btnRegister.isEnabled = false
         loadingIndicator.isHidden = false
         
         let userName = tfUserName.text
         let password = tfPassword.text
-        let url = URL(string: "\(RequestAddress)/api/user/accesstoken")
+        let url = URL(string: AccessTokenAddress)
         let params = ["name": userName ?? "", "password": password ?? ""]
         
         NetworkUtil.postEncodedData(to: url!, params: params) { (data: Data?, response: URLResponse?, error: Error?) in
@@ -46,6 +45,7 @@ class ViewController: UIViewController {
             defer {
                 DispatchQueue.main.async {
                     self.btnLogin.isEnabled = true
+                    self.btnRegister.isEnabled = true
                     self.loadingIndicator.isHidden = true
                 }
             }
@@ -92,6 +92,10 @@ class ViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func actionRegister(_ sender: Any) {
+        self.performSegue(withIdentifier: "register", sender: nil)
     }
     
     override func didReceiveMemoryWarning() {

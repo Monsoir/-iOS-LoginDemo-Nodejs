@@ -39,7 +39,7 @@ class DetailViewController: UIViewController {
             "Authorization": token,
         ]
         
-        NetworkUtil.getData(from: URL(string: "\(RequestAddress)/api/user/info")!, headers: headers, params: nil) { (data, response, error) in
+        NetworkUtil.getData(from: URL(string: UserInfoAddress)!, headers: headers, params: nil) { (data, response, error) in
             defer {
                 DispatchQueue.main.async {
                     sender.isEnabled = true

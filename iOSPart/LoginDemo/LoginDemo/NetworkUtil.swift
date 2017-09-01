@@ -18,7 +18,7 @@ class NetworkUtil: NSObject {
             let pairs = params!.map({ (key, value) -> String in
                 return "\(key)=\(value)"
             })
-            return pairs.joined(separator: "&")
+            return "?" + pairs.joined(separator: "&")
         }()
         let theURL = url.appendingPathComponent(body ?? "")
         

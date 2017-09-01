@@ -17,6 +17,7 @@
 		F9430B201F57E68000BEB5FF /* NetworkUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9430B1F1F57E68000BEB5FF /* NetworkUtil.swift */; };
 		F959552E1F57FD990038A92B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959552D1F57FD990038A92B /* DetailViewController.swift */; };
 		F95955301F5805F10038A92B /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F959552F1F5805F10038A92B /* Const.swift */; };
+		F97667141F58F216006BE752 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F97667131F58F216006BE752 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		F9430B1F1F57E68000BEB5FF /* NetworkUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkUtil.swift; sourceTree = "<group>"; };
 		F959552D1F57FD990038A92B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F959552F1F5805F10038A92B /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		F97667131F58F216006BE752 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				F9430AF11F57A32000BEB5FF /* AppDelegate.swift */,
 				F9430AF31F57A32000BEB5FF /* ViewController.swift */,
 				F959552D1F57FD990038A92B /* DetailViewController.swift */,
+				F97667131F58F216006BE752 /* RegisterViewController.swift */,
 				F959552F1F5805F10038A92B /* Const.swift */,
 				F9430B1F1F57E68000BEB5FF /* NetworkUtil.swift */,
 				F9430AF51F57A32000BEB5FF /* Main.storyboard */,
@@ -268,6 +271,7 @@
 				F9430AF41F57A32000BEB5FF /* ViewController.swift in Sources */,
 				F9430AF21F57A32000BEB5FF /* AppDelegate.swift in Sources */,
 				F9430B201F57E68000BEB5FF /* NetworkUtil.swift in Sources */,
+				F97667141F58F216006BE752 /* RegisterViewController.swift in Sources */,
 				F959552E1F57FD990038A92B /* DetailViewController.swift in Sources */,
 				F95955301F5805F10038A92B /* Const.swift in Sources */,
 			);
